@@ -114,6 +114,15 @@ make menuconfig
 scripts/config --disable MODULE_SIG  
 scripts/config --disable DEBUG_INFO  
 
+CONFIG_SYSTEM_TRUSTED_kEY="debian/canonical-certs.pem"
+改为：
+CONFIG_SYSTEM_TRUSTED_kEY=""
+
+（可选：）
+CONFIG_SYSTEM_REVOCATION_kEYS="debian/canonical-revoked-certs.pem"
+改为：
+CONFIG_SYSTEM_REVOCATION_kEYS=""
+
 
 开始编译  
 centos：make rpm-pkg
